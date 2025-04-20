@@ -24,7 +24,7 @@ class Person
         $breads_eaten = $this->breads_eaten;
         if ($breads_eaten < $min_bread) {
             $breads_remaining = $min_bread - $breads_eaten;
-            return "$name still needs to eat $breads_remaining";
+            return "$name still needs to eat $breads_remaining breads";
         } elseif ($breads_eaten == $min_bread) {
             return "$name ate enough bread";
         } else {
@@ -33,6 +33,12 @@ class Person
     }
 }
 
-$person = new Person("Rafael", 19, "Male", 12);
-echo $person->walk();
-echo $person->eat();
+$person1 = new Person("Rafael", 19, "Male", 12);
+$person2 = new Person("Sofia", 15, "Female", 5);
+$person3 = new Person("Maria", 50, "Female", 10);
+echo $person1->walk();
+echo $person1->eat();
+echo $person2->walk();
+echo $person2->eat();
+echo $person3->walk();
+echo $person3->eat();
